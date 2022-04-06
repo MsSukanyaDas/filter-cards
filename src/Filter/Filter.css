@@ -1,0 +1,73 @@
+body {
+  font-family: sans-serif;
+  margin: 0 auto;
+  text-align: center;
+  /* background-color: cadetblue; */
+}
+
+/* This is to be able to center the content in the middle of the page; */
+.container {
+  width: 90%;
+  height: 50%;
+  margin: 50px 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+div label input {
+  margin-right: 100px;
+}
+
+.category {
+  margin: 4px;
+  background-color: cadetblue;
+  border-radius: 4px;
+  border: 1px solid #fff;
+  overflow: hidden;
+  float: left;
+}
+
+.category label {
+  float: left;
+  line-height: 3em;
+  width: 5em;
+  height: 3em;
+  cursor: pointer;
+}
+
+.category label span {
+  text-align: center;
+  padding: 3px 0;
+  display: block;
+}
+
+.category label input {
+  position: absolute;
+  display: none;
+  color: #fff !important;
+}
+
+/* selects all of the text within the input element and changes the color of the text */
+.category label input+span {
+  color: #fff;
+}
+
+/* This will declare how a selected input will look giving generic properties */
+.category input:checked+span {
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+}
+
+/*
+  This following statements selects each category individually that contains an input element that is a checkbox and is checked (or selected) and chabges the background color of the span element.
+  */
+
+.all input:checked+span {
+  background-color: cadetblue;
+}
+
+input:checked+span {
+  background-color: powderblue;
+}
